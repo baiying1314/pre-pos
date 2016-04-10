@@ -1,11 +1,6 @@
-function create_updated_collection(collection_a, object_b) {
-  //在这里写入代码
-  var collection_c = count_same_elements(collection_a)
-  return create1_updated_collection(collection_c, object_b)
-}
 function count_same_elements(collection) {
   var result = [];
-  var str=[];
+   var str=[];
 
   for (var i = 0; i < collection.length; i++) {
 
@@ -21,7 +16,7 @@ function count_same_elements(collection) {
         if (j >= result.length)
           result.push({key: collection[i], count: 1});
       }
-    }
+    } 
     else {
       str = collection[i].split('-');
       if (i == 0)
@@ -40,12 +35,4 @@ function count_same_elements(collection) {
   return result;
 }
 
-function create1_updated_collection(collection_a, object_b) {
-
-  for(var i = 0;i < collection_a.length;i++)
-    for(var j = 0;j < object_b.value.length;j++){
-      if(collection_a[i].key===object_b.value[j])
-        collection_a[i].count=collection_a[i].count-(parseInt)(collection_a[i].count/3);
-    }
-  return collection_a;
-}
+  
